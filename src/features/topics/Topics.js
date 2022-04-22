@@ -4,9 +4,10 @@ import { selectTopics } from "./topicsSlice";
 import { Link } from "react-router-dom";
 import ROUTES from "../../app/routes";
 
-export default function Topics() {
-  const topics = useSelector(selectTopics); // replace this with a call to your selector to select all the topics in state
 
+export default function Topics() {
+  const topics = useSelector(selectTopics);
+  console.log(topics);
   return (
     <section className="center">
       <h1>Topics</h1>

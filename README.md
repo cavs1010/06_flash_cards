@@ -1,5 +1,5 @@
 # 🧑‍🎓 Flash card webbapp<br>
-[Objective](#objective_h) | [Languajes](#languajes_h) | [Status](#status_h) | [Acknowledge](#acknowledge_h) 
+[Objective](#objective_h) | [Languages](#languages_h) | [Status](#status_h) | [Acknowledge](#acknowledge_h) 
 
 <link href="https://languages.abranhe.com/logos.css" rel="stylesheet">
 
@@ -9,7 +9,7 @@
 <p>Utilize Redux and redux toolkit for state management</p>
 
 
-<h2>Languajes and tools<a name="languajes_h"></a></h2>
+<h2>Languages and tools<a name="languages_h"></a></h2>
 <p></p>
 <ul><li> Frameworks and languages:<br>
 <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg" alt="javascript" width="40" height="40"/> </a>

@@ -7,7 +7,6 @@ import ROUTES from "../../app/routes";
 
 export default function Topics() {
   const topics = useSelector(selectTopics);
-  console.log(topics);
   return (
     <section className="center">
       <h1>Topics</h1>

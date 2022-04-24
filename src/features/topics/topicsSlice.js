@@ -11,19 +11,20 @@ const topics = {
         id: action.payload.id,
         name: action.payload.name,
         icon: action.payload.icon,
-        quizIds: ["1", "3"]
+        quizIds: []
       };
-      console.log(state.topics);
       state.topics = { ...state.topics, [newTopic.id]: newTopic };
+    },
+    addQuizFromTopic: (state, action) => {
+      state.topics[action.payload.topicId].quizIds.push(action.payload.id);
     }
-  },
-  new: {}
+  }
 };
 
-export const topicsSlice = createSlice(topics);
+const topicsSlice = createSlice(topics);
 //Required for the creation of the store:
 export const topicReducer = topicsSlice.reducer;
 //Required for create actions
-export const { addTopic } = topicsSlice.actions;
+export const { addTopic, addQuizFromTopic } = topicsSlice.actions;
 //Required for access the State
 export const selectTopics = (state) => state.topics.topics;

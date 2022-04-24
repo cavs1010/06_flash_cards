@@ -5,12 +5,6 @@ const quizzes = {
   name: "quizzes",
   initialState: {
     quizzes: {
-      456: {
-        id: "456",
-        topicId: "123",
-        name: "quiz for example topic",
-        cardIds: ["789", "101", "102"]
-      }
     }
   },
   reducers: {
@@ -19,7 +13,7 @@ const quizzes = {
         id: action.payload.id,
         name: action.payload.name,
         topicId: action.payload.topicId,
-        cardIds: []
+        cardIds: action.payload.cardIds
       };
       state.quizzes = { ...state.quizzes, [newQuiz.id]: newQuiz };
     }

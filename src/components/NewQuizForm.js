@@ -5,6 +5,7 @@ import { v4 as uuidv4 } from "uuid";
 import ROUTES from "../app/routes";
 import { selectTopics } from "../features/topics/topicsSlice";
 import { addQuizTopic, addQuiz } from "../features/quizzes/quizzesSlice";
+import { addCard } from "../features/cards/cardSlice";
 import store from "../app/store";
 
 export default function NewQuizForm() {
@@ -19,10 +20,17 @@ export default function NewQuizForm() {
     if (name.length === 0) {
       return;
     }
-    //console.log(e.target[1].value);
     const cardIds = [];
     // create the new cards here and add each card's id to cardIds
     // create the new quiz here
+    cards.map((card) => {
+      const cardId = uuidv4();
+      cardIds.push(cardId);
+      store.dispatch(
+        addCard({ id: cardId, front: card.front, back: card.back })
+      );
+    });
+    console.log(cardIds);
     const newQuiz = {
       id: uuidv4(),
       name: e.target[0].value,
@@ -30,7 +38,6 @@ export default function NewQuizForm() {
       cardIds: cardIds,
     };
     store.dispatch(addQuizTopic(newQuiz));
-
     history.push(ROUTES.quizzesRoute());
   };
 
